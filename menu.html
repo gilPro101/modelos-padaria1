@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Padaria</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container-logo">
+        <img src="img/seu-logo.svg" class="header__logo" alt="logo feio" />
+        <p class="header__nome"><strong>Sua Padaria</strong></p>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="aboutUs.html">Sobre nós</a>
+          </li>
+          <li>
+            <a href="menu.html">Menu</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__button-container">
+        <button id="btn-lights">
+          <img src="./img/light_off_24dp_FFB22C.svg" alt="icone lampada" />
+        </button>
+        <button id="btn-sizeup">
+          <img src="./img/text_increase_24dp_FFB22C.svg" alt="icone aumentar texto" />
+        </button>
+        <button id="btn-sizedown">
+          <img src="img/text_decrease_24dp_FFB22C.svg" alt="icone diminuir texto" />
+        </button>
+        <button id="btn-menu-float">
+          <svg
+            height="20"
+            viewBox="0 -960 1440 1368"
+            width="20"
+            fill="#ffb22c"
+            version="1.1"
+            id="svg1"
+            sodipodi:docname="wb_not_incandescent_36dp_dark.svg"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="rect16"
+              style="fill: #ffb22c; stroke-width: 324.682"
+              d="m 0,128.00005 h 1440.0001 v 280 H 0 Z M 0,-960 h 1440.0001 v 280.00003 H 0 Z m 0,544.00003 h 1440.0001 v 280 H 0 Z"
+            />
+          </svg>
+        </button>
+        <nav class="header__nav-float hidden">
+          <ul class="header__links-float">
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="aboutUs.html">Sobre nós</a>
+            </li>
+            <li>
+              <a href="menu.html">Menu</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="display">
+        <div class="display__window">
+          <div class="display__window-screen">
+            <img class="screen__img" src="#" alt="imagem da vez" />
+            <p class="screen__name"></p>
+            <p class="screen__description"></p>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------------------------------------------------------------------------------->
+      <section class="menu">
+        <h2 class="menu-title">Nosso Menu</h2>
+        <input
+          class="menu__input"
+          id="menu-input"
+          type="search"
+          placeholder="O que você procura?"
+        />
+        <div class="menu__container">
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Bolo Red Velvet" class="menu__item-img" />
+            <p class="menu__item-name">Bolo Red Velvet</p>
+            <p class="menu__item-description">
+              Delicioso bolo com creme de queijo e cobertura aveludada.
+            </p>
+          </div>
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Torta de Limão" class="menu__item-img" />
+            <p class="menu__item-name">Torta de Limão</p>
+            <p class="menu__item-description">
+              Torta refrescante com base crocante e creme de limão.
+            </p>
+          </div>
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Mousse de Chocolate" class="menu__item-img" />
+            <p class="menu__item-name">Mousse de Chocolate</p>
+            <p class="menu__item-description">Mousse leve e aerada com chocolate belga.</p>
+          </div>
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Pudim de Leite Condensado" class="menu__item-img" />
+            <p class="menu__item-name">Pudim de Leite Condensado</p>
+            <p class="menu__item-description">Pudim cremoso com calda de caramelo.</p>
+          </div>
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Brigadeiro Gourmet" class="menu__item-img" />
+            <p class="menu__item-name">Brigadeiro Gourmet</p>
+            <p class="menu__item-description">Brigadeiro tradicional com ingredientes premium.</p>
+          </div>
+          <div class="menu__item">
+            <img
+              src="img/red-velvet.jpg"
+              alt="Cheesecake de Frutas Vermelhas"
+              class="menu__item-img"
+            />
+            <p class="menu__item-name">Cheesecake de Frutas Vermelhas</p>
+            <p class="menu__item-description">
+              Cheesecake com cobertura de frutas vermelhas frescas.
+            </p>
+          </div>
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Brownie com Sorvete" class="menu__item-img" />
+            <p class="menu__item-name">Brownie com Sorvete</p>
+            <p class="menu__item-description">
+              Brownie quente com bola de sorvete e calda de chocolate.
+            </p>
+          </div>
+          <div class="menu__item">
+            <img src="img/red-velvet.jpg" alt="Cupcake de Cenoura" class="menu__item-img" />
+            <p class="menu__item-name">Cupcake de Cenoura</p>
+            <p class="menu__item-description">
+              Cupcake fofinho de cenoura com cobertura de cream cheese.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="pre-footer hidden">
+        <img src="img/bread-end.jpg" class="footer__img" alt="" />
+      </div>
+      <footer>
+        <div class="footer__container">
+          <div class="footer__container-info">
+            <h3>Contato</h3>
+            <p>Telefone: (21) 99999-9999</p>
+            <p>Email:www.SuaPadaria.com.br</p>
+            <a
+              href="https://wa.me/5521990626240?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+              ><img src="img/whatsapp-logo (1).svg" alt="whatsapp-logo" />WhatsApp</a
+            >
+          </div>
+          <div class="footer__container-siganos">
+            <h3>Siga-nos</h3>
+            <div class="siganos__container-icons">
+              <a href="https://www.instagram.com.br" target="_blank"
+                ><img src="img/Instagram_logo_26x26_certo.svg" alt="Icone instagram"
+              /></a>
+              <a href="https://www.facebook.com.br" target="_blank"
+                ><img src="img/logo-facebook.svg" alt="icone facebook"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__container-service-hours">
+            <h3>Horário de funcionamento</h3>
+            <p>Segunda a sexta: 8h às 18h</p>
+            <p>Sábado: 8h às 12h</p>
+          </div>
+          <div class="footer__container-politica-privacidade">
+            <a href="./privacidade-termos/politica-de-privacidade.html" target="_blank"
+              >Política de Privacidade</a
+            >
+            <a href="./privacidade-termos/termos-de-uso.html" target="_blank">Termos de Uso</a>
+          </div>
+        </div>
+        <img src="./img/trigo-campo-editado3.png" alt="campo de trigo" class="footer__img-end" />
+      </footer>
+    </main>
+    <script src="menu.js"></script>
+  </body>
+</html>

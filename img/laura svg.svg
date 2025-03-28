@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60"
+   height="59.841675"
+   viewBox="0 0 60 59.841675"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.3788582"
+     inkscape:cx="810.45316"
+     inkscape:cy="588.53041"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="60"
+       height="59.841675"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-724.45935,-449.23187)">
+    <g
+       id="g5"
+       transform="matrix(0.21349505,0,0,0.24830567,515.20488,354.1785)">
+      <g
+         id="g6"
+         transform="translate(166.34025,34.077105)">
+        <ellipse
+           style="fill:#de0707;fill-opacity:0.7119;stroke:#000000;stroke-opacity:1"
+           id="path1"
+           cx="953.84613"
+           cy="469.23077"
+           rx="120"
+           ry="120.00001" />
+        <circle
+           style="fill:#eff9ff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           id="path2"
+           cx="953.33337"
+           cy="469.2308"
+           r="110" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.79px;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#bdfdf4;fill-opacity:0.99688;stroke:#000000;stroke-width:1.08385;stroke-opacity:1"
+           x="184.74715"
+           y="1003.1626"
+           id="text5"
+           transform="matrix(0.77754506,-0.64081169,0.71522184,0.69665092,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan5"
+             x="184.74715"
+             y="1003.1626"
+             style="fill:#bdfdf4;fill-opacity:0.99688;stroke-width:1.08385">Laura</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

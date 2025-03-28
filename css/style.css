@@ -1,0 +1,523 @@
+@font-face {
+  font-family: "Krona One";
+  src: url("../fonts/Krona_One/KronaOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Numans";
+  src: url("../fonts/Numans/Numans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --cor-primaria: #854836;
+  --cor-secundaria: #ffb22c;
+  --cor-terciaria: #f93827;
+  --cor-base-claro: #f7f7f7;
+  --cor-base-escuro: #242222;
+
+  --fonte-titulo: "Krona One", sans-serif;
+  --fonte-texto: "Numans", sans-serif;
+  --fonte-tamanho: 20px;
+  --fonte-cor: #242222;
+}
+
+hr {
+  height: 900px;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--fonte-cor);
+  background-color: var(--cor-base-claro);
+  line-height: 1.5;
+  font-size: var(--fonte-tamanho); /* e vai aumentando de 6 em 6 px */
+  /* margin: 1em; */
+  /* overflow-x: hidden; pra não deixar scrollar pra direita... por conta do translateX */
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.7em;
+  font-family: var(--fonte-titulo);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.9em;
+  font-family: var(--fonte-titulo);
+  text-align: center;
+}
+h1 {
+  font-size: 1.9em;
+  margin-bottom: 1.2em;
+  font-family: var(--fonte-titulo);
+  text-align: center;
+}
+/* //--------------------------------------------------------------------------------------------> */
+header {
+  font-family: var(--fonte-titulo);
+  background-color: var(--cor-primaria);
+  display: flex;
+  padding: 0 10%;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: -1px;
+  margin-bottom: 20px;
+  color: #242222;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.header__container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 36px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__button-container button {
+  background-color: transparent;
+  border: none;
+}
+
+.header__button-container {
+  position: relative;
+}
+
+.header__nav-float {
+  position: absolute;
+  top: 120%;
+  right: -30%;
+  background-color: var(--cor-base-claro);
+}
+
+.header__links-float li a {
+  text-decoration: none;
+  color: var(--fonte-cor);
+}
+/* //--------------------------------------------------------------------------------------------> */
+.home-section {
+  padding: 0 10%;
+  margin-top: 100px;
+}
+
+.home-subtitle {
+  text-align: center;
+}
+.home-text {
+  text-align: justify;
+}
+.home-container__img-padeiro {
+  width: 250px;
+  display: flex;
+  justify-self: center;
+}
+
+.whatsapp-logo-sticky {
+  position: fixed; /* Fix the logo relative to the viewport */
+  bottom: 5px; /* Distance from the bottom of the viewport */
+  right: 10px; /* Distance from the right of the viewport */
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+/* //--------------------------------------------------------------------------------------------> */
+
+.menu__card {
+  padding: 0 12%;
+  margin: 1em 0;
+  border-radius: 8px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease-out;
+}
+
+.menu__card.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    transform 1.5s ease,
+    opacity 1.5s ease;
+}
+
+.menu__card-cofee {
+  background-color: var(--cor-secundaria);
+  transform: translateX(-100%);
+}
+
+.menu__card-bread {
+  background-color: var(--cor-primaria);
+  transform: translateX(-100%);
+  color: var(--cor-base-escuro);
+}
+
+.menu__card-cake {
+  background-color: var(--cor-terciaria);
+  transform: translateX(-100%);
+}
+
+.menu__img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.menu__link {
+  border: 2px solid var(--cor-base-escuro);
+  padding: 5px;
+  font-family: var(--fonte-texto);
+  border-radius: 8px;
+  align-self: center;
+  font-size: 1em;
+  margin: 10px 0;
+  text-decoration: none;
+  color: var(--cor-base-escuro);
+  text-align: center;
+
+  /* teste transition */
+  position: relative;
+  min-width: fit-content;
+  overflow: hidden;
+  height: fit-content;
+  background-color: #f7f7f7;
+}
+
+.menu__link span {
+  position: relative;
+  z-index: 2;
+}
+
+.menu__link::before {
+  content: "";
+  position: absolute;
+  top: -300%;
+  left: -300%;
+  width: 300%;
+  height: 400%;
+  transform: rotate(45deg);
+  background-color: var(--cor-secundaria);
+  z-index: 0;
+  transition:
+    left 1s ease,
+    top 1s ease;
+}
+
+/* .menu__link:hover {
+  background-color: #242222;
+} */
+
+.menu__link:hover::before {
+  left: -60px;
+  top: 0;
+}
+/* //--------------------------------------------------------------------------------------------> */
+.about-us__section {
+  text-align: center;
+  padding: 0 10%;
+}
+
+.about-us__container-texto p {
+  text-align: left;
+  /* text-justify: inter-word; */
+  /* hyphens: auto; */
+  /* overflow-wrap: break-word; */
+}
+
+.about-us__texto {
+  text-align: justify;
+}
+
+.about-us__img {
+  width: 300px;
+  object-fit: cover;
+  left: -50px;
+}
+/* //--------------------------------------------------------------------------------------------> */
+.favorites-title {
+  padding: 0 10%;
+}
+
+.favorites__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.favorites__item {
+  width: fit-content;
+}
+
+.favorites__item-img {
+  width: 100px;
+  border-radius: 40%;
+}
+
+.favorites__item-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+
+  transition: transform 0.3s ease;
+}
+
+.favorites__item-text {
+  text-align: center;
+}
+
+/* //--------------------------------------------------------------------------------------------> */
+
+.pre-footer-aboutus {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+}
+.footer__img-aboutus {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  opacity: 0.5;
+}
+.pre-footer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  /* clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);  pra transformar a div num poligono*/
+}
+.footer__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0px);
+  transition: transform 0.1s ease-out;
+  opacity: 0.5;
+}
+footer {
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+footer h3 {
+  margin-top: 20px;
+}
+
+.footer__container {
+  padding: 0 10%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.footer__container-info a {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.footer__container-siganos {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  display: block;
+}
+
+.siganos__container-icons {
+  display: flex;
+
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer__container-siganos a img {
+  width: 36px;
+}
+.footer__container-service-hours {
+  margin-bottom: 20px;
+}
+
+.footer__container-politica-privacidade {
+  padding-bottom: 20px;
+  z-index: 10;
+}
+.footer__container-politica-privacidade a {
+  text-decoration: none;
+  color: var(--fonte-cor);
+}
+
+.footer__img-end {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hidden {
+  display: none;
+}
+/* //--------------------------------------------------------------------------------------------> */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0; /* Optional: Start with 0 opacity */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Optional: Fully visible */
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Optional: Start with 0 opacity */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Optional: Fully visible */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* //--------------------------------------------------------------------------------------------> */
+@media screen and (min-width: 740px) {
+  .header__nav {
+    display: block;
+  }
+
+  .header__links {
+    display: flex;
+    gap: 15px;
+  }
+
+  #btn-menu-float {
+    display: none;
+  }
+
+  .header__links a {
+    text-decoration: none;
+    color: #242222;
+  }
+  /* //-------------------------------------------------------------------------->  home em flex*/
+  /* .home-section {
+    display: flex;
+    justify-content: center;
+  } */
+
+  /* .home-container__body {
+    width: 40%;
+  } */
+  /* //--------------------------------------------------------------------------> */
+  .home-container__img-padeiro {
+    width: 50%; /* A % é referente ao tamanho da imagem em relação ao container pai */
+  }
+
+  .whatsapp-logo-sticky img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* .menu-section { menus em  vertical
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 30px 30px;
+  } */
+  .menu__card {
+    flex-direction: row; /* aqui viraria column no menu em vertical*/
+    gap: 30px;
+    align-items: center;
+  }
+
+  .menu__img {
+    width: 133px;
+    height: 200px;
+  }
+
+  .about-us__container-texto {
+    padding: 0 50px;
+    padding-bottom: 30px;
+  }
+
+  .about-us__texto-mobile {
+    display: none;
+  }
+
+  .about-us__texto-web {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .favorites__container {
+    padding: 0 100px;
+    justify-content: center;
+  }
+
+  .favorites__item-img {
+    width: 200px;
+  }
+
+  .pre-footer {
+    margin-top: 50px;
+  }
+
+  .footer__img-aboutus {
+    top: -150%;
+  }
+  footer {
+    height: 600px;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .footer__img-end {
+    left: 0;
+    bottom: 0;
+  }
+
+  .footer__container-politica-privacidade {
+    margin-top: 60px;
+  }
+}
