@@ -48,6 +48,7 @@ h3 {
 h2 {
   font-size: 1.6em;
   margin-bottom: 0.9em;
+  margin-top: 0.9em;
   font-family: var(--fonte-titulo);
   text-align: center;
 }
@@ -64,13 +65,14 @@ header {
   display: flex;
   padding: 0 10%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-right: -1px;
   margin-bottom: 20px;
   color: #242222;
   position: fixed;
   width: 100vw;
   top: 0;
+  height: 50px;
 }
 
 .header__container-logo {
@@ -92,6 +94,7 @@ header {
 }
 
 .header__button-container {
+  display: flex;
   position: relative;
 }
 
@@ -208,7 +211,7 @@ header {
   top: -300%;
   left: -300%;
   width: 300%;
-  height: 400%;
+  height: 350%;
   transform: rotate(45deg);
   background-color: var(--cor-secundaria);
   z-index: 0;
@@ -245,7 +248,6 @@ header {
 .about-us__img {
   width: 300px;
   object-fit: cover;
-  left: -50px;
 }
 /* //--------------------------------------------------------------------------------------------> */
 .favorites-title {
@@ -278,25 +280,61 @@ header {
 .favorites__item-text {
   text-align: center;
 }
+/* --------------------------------------------------------------------------------------------> */
+.opinion {
+  width: 100%;
+  height: fit-content;
+}
+.swiper-container {
+  margin-top: 50px;
+  width: 100%;
+  height: fit-content; /* Adjust height as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+#swiper-pagination {
+  /* display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 50px; */
+  position: absolute; /* Ensure it's positioned correctly */
+  bottom: 0px; /* Adjust this value as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  z-index: 10; /* Ensure it's on top */
+  margin-top: 0; /* Remove any top margin */
+  text-align: center; /* Center text if needed */
+}
+
+.swiper-slide {
+  padding: 20px;
+  width: 200px;
+  background-color: var(--cor-secundaria); /* Example background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  border-radius: 8px;
+}
+
+.swiper-slide__wrapper {
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.swiper-slide__wrapper span img {
+  border-radius: 50%;
+  width: 50px;
+}
 
 /* //--------------------------------------------------------------------------------------------> */
 
-.pre-footer-aboutus {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  margin-top: 50px;
-}
-.footer__img-aboutus {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: absolute;
-  top: -50%;
-  left: 0;
-  opacity: 0.5;
-}
 .pre-footer {
   width: 100%;
   height: 200px;
@@ -420,6 +458,10 @@ footer h3 {
 }
 /* //--------------------------------------------------------------------------------------------> */
 @media screen and (min-width: 740px) {
+  header {
+    justify-content: space-between;
+  }
+
   .header__nav {
     display: block;
   }
@@ -437,6 +479,7 @@ footer h3 {
     text-decoration: none;
     color: #242222;
   }
+
   /* //-------------------------------------------------------------------------->  home em flex*/
   /* .home-section {
     display: flex;
@@ -473,6 +516,10 @@ footer h3 {
     height: 200px;
   }
 
+  .about-us__footer-img {
+    top: -100%;
+  }
+
   .about-us__container-texto {
     padding: 0 50px;
     padding-bottom: 30px;
@@ -494,6 +541,10 @@ footer h3 {
 
   .favorites__item-img {
     width: 200px;
+  }
+
+  .swiper-slide__wrapper {
+    flex-direction: row;
   }
 
   .pre-footer {

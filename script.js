@@ -75,7 +75,7 @@ function toggleImgSrc(imgSelector, src1, src2) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".menu__card");
-
+  //Observer dos cards
   const observer = new IntersectionObserver(
     (entries) => {
       // console.log(entries);
@@ -116,10 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   observerParallaxEffect.observe(photoParallax);
+  // observerParallaxEffect.observe(photoParallaxAboutUs);
 
   window.addEventListener("scroll", () => {
-    // console.log("scrollPosition  " + window.scrollY);
-    // console.log("innerWidth  " + window.innerWidth);
+    console.log("scrollPosition  " + window.scrollY);
+    console.log("innerWidth  " + window.innerWidth);
     // if (isPhotoVisible) { No final das contas não faz diferença o IntersectionObserver nesse caso
     //na verdade faz se eu conseguir zerar o valor do scrollPosition assim que o isPhotoVisible=true...
     //  porque daí o ponto de partida vai ser um scrollPosition = 0 e não vou ter problemas com foto saindo da tela...
@@ -134,13 +135,16 @@ document.addEventListener("DOMContentLoaded", () => {
       offset = scrollPosition * 0.1;
     } else if (window.innerWidth >= 740) {
       // For medium screens
-      offset = scrollPosition * 0.1 - 300;
+      offset = scrollPosition * 0.1 - 400;
     } else {
       // For small screens
       offset = scrollPosition * 0.1 - 285;
     }
     // console.log("offset:   " + offset);
     photoParallax.style.transform = `translateY(${-offset}px)`;
+    // photoParallaxAboutUs.style.transform = `translateY(${offset}px)`;
+
     // }else{offsetZerado = 0 }
   });
 });
+// -------------------------------------------------------------------------------------------->

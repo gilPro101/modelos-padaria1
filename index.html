@@ -6,6 +6,7 @@
     <title>Sua Padaria</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body>
     <header>
@@ -182,6 +183,68 @@
           </div>
         </div>
       </section>
+      <section class="opinions">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span class="swiper-slide__wrapper">
+                <span class="swiper-slide__wrapper-user">
+                  <img src="img/google opinion.png" alt="" />
+                  <p>Fulana de tal</p>
+                </span>
+                <p class="swiper-slide__wrapper-opinion">
+                  Oásis de Sabores: Padaria com cardápio variado, atendimento cordial e ambiente
+                  acolhedor.
+                </p>
+              </span>
+            </div>
+            <div class="swiper-slide">
+              <span class="swiper-slide__wrapper">
+                <span class="swiper-slide__wrapper-user">
+                  <img src="img/google opinion.png" alt="" />
+                  <p>Fulana de tal</p>
+                </span>
+                <p class="swiper-slide__wrapper-opinion">
+                  A padaria local é um verdadeiro tesouro para os moradores do bairro. Com um
+                  cardápio variado, desde pães fresquinhos até bolos e doces irresistíveis, ela
+                  conquista a todos que a visitam.
+                </p>
+              </span>
+            </div>
+            <div class="swiper-slide">
+              <span class="swiper-slide__wrapper">
+                <span class="swiper-slide__wrapper-user">
+                  <img src="img/google opinion.png" alt="" />
+                  <p>Fulana de tal</p>
+                </span>
+                <p class="swiper-slide__wrapper-opinion">
+                  Para os amantes de doces, a padaria oferece uma variedade incrível de opções. Os
+                  bolos confeitados são verdadeiras obras de arte, com decorações impecáveis e
+                  sabores que surpreendem o paladar.
+                </p>
+              </span>
+            </div>
+            <div class="swiper-slide">
+              <span class="swiper-slide__wrapper">
+                <span class="swiper-slide__wrapper-user">
+                  <img src="img/google opinion.png" alt="" />
+                  <p>Fulana de tal</p>
+                </span>
+                <p class="swiper-slide__wrapper-opinion">
+                  A padaria se tornou um ponto de encontro para os moradores de Rocha Miranda. É o
+                  lugar perfeito para tomar um café da manhã antes do trabalho, fazer um lanche
+                  rápido durante o dia ou simplesmente bater um papo com os amigos.
+                </p>
+              </span>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination" id="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
       <!-- //-------------------------------------------------------------------------------------------->
       <div class="pre-footer">
         <img src="img/bread-end.jpg" class="footer__img" alt="" />
@@ -224,5 +287,26 @@
       </footer>
     </main>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        // mousewheel: {
+        //   invert: true,
+        // },
+        slidesPerView: 1, // Set the number of slides to show
+        spaceBetween: 30, // Optional: space between slides
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

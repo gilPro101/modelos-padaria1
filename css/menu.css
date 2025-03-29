@@ -23,7 +23,7 @@
   --fonte-tamanho: 20px;
   --fonte-cor: #242222;
 
-  --img-size: 300px;
+  --img-size: 250px;
 }
 
 body {
@@ -67,7 +67,7 @@ header {
   display: flex;
   padding: 0 10%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: content-box;
   margin-right: -1px;
   color: #242222;
@@ -135,15 +135,6 @@ header {
   border-radius: 40%;
 }
 
-/* .menu__item-img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow 
-  position: relative;
-  z-index: 1;
-
-  transition: transform 0.3s ease;
-} */
-
 .menu__item-name {
   width: 100%;
   text-align: center;
@@ -163,7 +154,13 @@ header {
   border: 2px solid var(--cor-terciaria);
   margin-bottom: 30px;
   font-family: inherit;
+  color: var(--fonte-cor);
 }
+
+.menu__input::placeholder {
+  color: var(--fonte-cor);
+}
+
 /* --------------------------------------------------------------------------------------------> */
 .display {
   display: none;
@@ -187,6 +184,7 @@ header {
   background-color: var(--cor-base-claro);
   padding: 20px 0;
   z-index: 10;
+  border-radius: 10px;
 }
 .screen__description {
   text-align: center;
@@ -199,6 +197,12 @@ header {
 .screen__name {
   color: var(--fonte-cor);
   font-size: 20px;
+}
+.whatsapp-logo-sticky {
+  position: fixed; /* Fix the logo relative to the viewport */
+  bottom: 5px; /* Distance from the bottom of the viewport */
+  right: 10px; /* Distance from the right of the viewport */
+  z-index: 10; /* Ensure it stays above other elements */
 }
 /* --------------------------------------------------------------------------------------------> */
 .pre-footer {
@@ -213,13 +217,13 @@ header {
   height: auto;
   object-fit: cover;
   position: absolute;
-  top: -100%;
+  top: -30%;
   left: 0;
   opacity: 0.8;
 }
 footer {
-  margin-top: 100px;
-  height: 500px;
+  margin-top: 50px;
+  height: 750px;
   position: relative;
   z-index: 1;
   font-size: 15px;
@@ -291,6 +295,10 @@ footer h3 {
 
 /* //--------------------------------------------------------------------------------------------> */
 @media screen and (min-width: 740px) {
+  header {
+    justify-content: space-between;
+  }
+
   .header__nav {
     display: block;
   }
@@ -326,17 +334,25 @@ footer h3 {
     white-space: normal;
   }
 
+  .screen__img {
+    width: 40vw;
+    height: auto;
+  }
   .pre-footer {
     margin-top: 50px;
   }
 
   footer {
-    height: 600px;
+    height: 700px;
   }
 
   .footer__container {
     flex-direction: row;
     align-items: start;
+  }
+
+  .footer__img {
+    top: -100%;
   }
 
   .footer__img-end {
